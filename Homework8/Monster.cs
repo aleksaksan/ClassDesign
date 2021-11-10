@@ -157,8 +157,11 @@ namespace Homework8
         public void Wounds(int damage)
         {
             HP -= damage;
-            if (HP < 0)
+            if (HP <= 0)
+            {
                 HP = 0;
+                Console.WriteLine(_dieCry);
+            }
         }
         void Heal()
         {
